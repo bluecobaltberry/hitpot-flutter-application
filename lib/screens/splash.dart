@@ -37,6 +37,7 @@ class _SplashState extends State<Splash> {
               SvgPicture.asset(
                 'assets/img/apple-logo.svg',
               ),
+              const Text('HITPOT')
             ],
           )),
     );

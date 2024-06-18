@@ -12,42 +12,33 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          SizedBox(height: 110.h),
-          SizedBox(
-            width: 200.w,
-            height: 200.h,
-            child: SvgPicture.asset(
-              'assets/img/logo-login.svg',
-            ),
+        backgroundColor: Colors.white,
+        body: Padding(
+          padding: EdgeInsets.only(
+            left: 16.r,
+            right: 16.r,
+            top: 24.r,
+            bottom: 16.r,
           ),
-          SizedBox(height: 58.h),
-          SizedBox(
-            width: 189.w,
-            height: 70.h,
-            child: SvgPicture.asset(
-              'assets/img/textbox-login.svg',
-            ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              SizedBox(height: 200.h),
+              const BtnLogin('assets/img/logo-kakao.svg', '카카오로 계속하기'),
+              SizedBox(
+                height: 8.h,
+              ),
+              const BtnLogin('assets/img/logo-naver.svg', 'Google로 계속하기'),
+              SizedBox(
+                height: 8.h,
+              ),
+              const BtnLogin('assets/img/logo-apple.svg', 'Apple로 계속하기'),
+              SizedBox(
+                height: 24.h,
+              ),
+            ],
           ),
-          SizedBox(height: 8.h),
-          const BtnLogin('assets/img/logo-kakao.svg', '카카오로 계속하기'),
-          SizedBox(
-            height: 8.h,
-          ),
-          const BtnLogin('assets/img/logo-naver.svg', 'Google로 계속하기'),
-          SizedBox(
-            height: 8.h,
-          ),
-          const BtnLogin('assets/img/logo-apple.svg', 'Apple로 계속하기'),
-          SizedBox(
-            height: 24.h,
-          ),
-        ],
-      ),
-    );
+        ));
   }
 }
